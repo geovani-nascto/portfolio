@@ -3,4 +3,113 @@
     padding: 40px 20px;
     margin: 0 auto;
     display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+}
+
+.experience .subtitle{
+    color: #e0e0e0;
+}
+
+.experience--text{
+    font-size: 1.5rem;
+    max-width: 40ch;
+    line-height: 1.33;
+    margin-bottom: 60px;
+    color: #525252;
+}
+
+.experience--text strong{
+    color: #141414;
+}
+
+.enterprises{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.enterprises::before{
+    content: "";
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(#b6f829, #67dd0a);
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: -4px;
+}
+
+.enterprises--title{
+    font-size: 1.125rem;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+.enterprises--text{
+    font-size: 0.875rem;
+    color: #525252;
+    line-height: 1.4;
+}
+
+.enterprises--habilities{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: flex-start;
+}
+
+.enterprises--habilities li{
+    font-size: 0.875rem;
+    line-height: 1.4;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 5px 10px;
+}
+
+.enterprises--year{
+    position: absolute;
+    top: 22px;
+    left: -100px;
+    color: #525252;
+    font-size: .875rem;
+    width: 80px;
+    text-align: right;
+}
+
+@media (max-width: 800px){
+    .experience{
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .experience .subtitle{
+        color: #141414;
+    }
+
+    .experience--text{
+        font-size: 1.25rem;
+    }
+
+    .enterprises--year{
+        position: initial;
+        order: 1;
+        width: initial;
+        text-align: left;
+    }
+
+    .enterprises--year::before{
+        content: "Ano: ";
+    }
+}
+
+@media (max-width: 400px){
+    .enterprises{
+        grid-template-columns: 1fr;
+    }
 }
